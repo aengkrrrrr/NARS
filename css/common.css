@@ -2,22 +2,167 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
 
 :root {
-  --mainColor : #D10744;
-  --subColor :#000;
-
+  --maincol : #D10744;
+  --subcol :#000;
+  --white :#fff;
+  --subtit : 24px;
+  --maintit : 54px;
+  --strongtit : 65px;
+  --mainpd : 27px;
 }
 
 *{
   text-decoration: none;
+  color: var(--white);
 }
-#header {
-  width: 1920px;
+body {
+  font-family: 'Helvetica Neue','Pretendard', serif;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+/* input 초기화 */
+input.hide-clear[type=search]::-ms-clear,
+input.hide-clear[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0; 
+}
+
+/* clears the 'X' from Chrome */
+input.hide-clear[type="search"]::-webkit-search-decoration,
+input.hide-clear[type="search"]::-webkit-search-cancel-button,
+input.hide-clear[type="search"]::-webkit-search-results-button,
+input.hide-clear[type="search"]::-webkit-search-results-decoration {
+  display: none; 
+}
+
+/* 또는 간단하게 아래와 같이 (scss) */
+input {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration{
+    display: none;
+  }
+}
+
+/* 헤더 공통 */
+
+.sub_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--mainpd);
+  height: 43px;
+}
+.sub_nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-right: 100px;
+}
+.sub_nav a,
+span {
+  color: var(--subcol);
+}
+.sub_nav ul li > a {
+  text-transform: uppercase;
 }
 .logo {
+  margin: 0;
+  font-size: 0;
+}
+.logo a{
   display: block;
   text-indent: -9999px;
   width: 225px;
   height: 90px;
   background: url(../images/nars-logo-white.png) no-repeat;
+}
+.header_ct {
+  background: var(--subcol);
+  padding: 0 var(--mainpd);
+  /* height: 88px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.gnb>li {
+  position: relative;
+}
+.gnb>li>a  {
+  font-size: var(--subtit);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.gnb .depth {
+  position: absolute;
+  left: 0;
+  top:  calc(100% + 34px);
+  /* display: flex; */
+  display: none;
+  gap: 48px;
+  width: 1920px;
+  height: 411px;
+  /* background: var(--white); */
+  background: pink;
+  padding-top: 40px;
+}
+
+.gnb .depth02 {
+  width: 87px;
+}
+.gnb .depth02 a {
+  color: var(--subcol);
+}
+.gnb .depth02 li:first-child {
+  font-weight: bold;
+}
+.search_bt {
+  background-color: var(--white);
+  color: var(--subcol);
+  width: 260px;
+  height: 40px;
+}
+input:focus {
+  outline: none;
+}
+.depth02 {
   border: 1px solid;
+}
+
+/* 푸터 공통 */
+#footer {
+  background: var(--subcol);
+}
+
+/* 버튼 */
+.primary_btn {
+  width: 255px;
+  height: 45px;
+  padding: 11px 61px;
+  font-size: var(--subtit);
+  line-height: var(--subtit);
+  background: var(--maincol);
+  color: var(--white);
+  text-align: center;
+}
+.secondary_btn {
+  width: 255px;
+  height: 45px;
+  padding: 11px 61px;
+  font-size: var(--subtit);
+  line-height: var(--subtit);
+  background: var(--white);
+  color: var(--subcol);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
 }

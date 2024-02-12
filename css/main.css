@@ -1,0 +1,154 @@
+@import url(../css/common.css);
+
+
+/* 메인슬라이드 */
+.slide-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-container {
+    display: flex;
+    margin:0;
+    padding: 0;
+}
+[class^=contents]{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main_slider .slide-container>li {
+    height: 500px;
+    width: 100%;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main_slider .contents > h2 {
+    display: block;
+    font-size: var(--strongtit);
+    line-height: var(--strongtit);
+    text-transform: uppercase;
+}
+.main_slider .contents > span {
+    display: block;
+    font-size: var(--subtit);
+    line-height: var(--subtit);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.main_slider .contents > p {
+    display: block;
+    font-size: var(--subtit);
+    line-height: var(--subtit);
+}
+
+.slide1 {
+    background-image: url(../images/main_slide01.webp);
+}
+.slide2 {
+    background-image: url(../images/main_slide02.jpg);
+}
+.slide3 {
+    background-image: url(../images/main_slide01.webp);
+}
+
+/* ----------------------------------------------------------------------- */
+
+
+/* 메인 tit */
+.text_area p {
+    color: var(--subcol);
+}
+/* ----------------------------------------------------------------------- */
+
+
+/* 메인 promo */
+.main_promo {
+    height: 500px;
+    width: 100%;
+   background: url(../images/promo_img.jpg) no-repeat center /cover;
+}
+.main_promo h2 {
+    display: block;
+    font-size: var(--strongtit);
+    line-height: var(--strongtit);
+    text-transform: uppercase;
+}
+.main_promo p {
+    display: block;
+    font-size: var(--subtit);
+    line-height: var(--subtit);
+}
+/* ----------------------------------------------------------------------- */
+
+
+/* 메인 newpd 슬라이드 */
+[class^=sec_tit] h3 {
+    color: var(--subcol);
+    font-size:calc(var(--maintit) - 4px);
+    line-height:calc(var(--maintit) - 4px);
+}
+[class^=sec_tit] a {
+    display: block;
+    color: var(--maincol);
+}
+.main_newpd .pd_txt p {
+    color: var(--subcol);
+    
+}
+.main_newpd img {
+    width: 70%;
+}
+/* ----------------------------------------------------------------------- */
+
+
+/* 메인 bestpd */
+.main_bestpd {
+    display: flex;
+    justify-content: space-between
+}
+.ct_area {
+    width: 960px;
+}
+.ct_area img {
+    width: 100%;
+    height: 713px;
+}
+.main_bestpd .contents{
+    background: var(--subcol);
+}
+/* ----------------------------------------------------------------------- */
+
+
+/* 메인 sns슬라이드 */
+.main_sns .slide-container {
+    gap: 30px;
+}
+/* ----------------------------------------------------------------------- */
+
+/* 메인 popular */
+.main_pop {
+    display: flex;
+}
+.pop_area {
+    width: 480px;
+    background: var(--subcol);
+}
+.main_pop img {
+    width: 100%;
+    height: 352px;
+}
+.pop_area a {
+    display: block;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 36px;
+}
