@@ -141,6 +141,9 @@ input:focus {
 #footer {
   background: var(--subcol);
 }
+.footer_gnb {
+  display: flex;
+}
 
 /* 버튼 */
 .primary_btn {
@@ -156,7 +159,7 @@ input:focus {
 .secondary_btn {
   width: 255px;
   height: 45px;
-  padding: 11px 61px;
+  display: inline-block;
   font-size: var(--subtit);
   line-height: var(--subtit);
   background: var(--white);
