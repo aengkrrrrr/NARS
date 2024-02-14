@@ -1,7 +1,7 @@
-@import url(../css/common.css);
-
-
 /* 메인슬라이드 */
+.sc_btn {
+    color: var(--white);
+}
 .slide-wrapper {
     width: 100%;
     overflow: hidden;
