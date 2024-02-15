@@ -30,7 +30,54 @@ body {
   font-size: 20px;
   line-height: 20px;
 }
+.cm_pd {
+  padding: 135px 0 81px 187px;
+}
+.contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
 
+[class^=sec_tit] {
+  display: inline-block;
+}
+[class^=sec_tit] h3 {
+  color: var(--subcol);
+  font-size:calc(var(--maintit) - 4px);
+  line-height:calc(var(--maintit) - 4px);
+}
+[class^=sec_tit] a {
+  display: inline-block;
+  padding-top: 27px;
+  color: var(--maincol);
+  text-transform: uppercase;
+}
+[class^=sec_tit] span {
+  display: inline-block;
+  color: var(--maincol);
+}
+[class^=controls] a {
+  display: inline-block;
+  color: var(--subcol);
+}
+[class^=promo_txt] {
+  width: 578px;
+  margin: 0 auto;
+}
+
+.ct_tit{
+  display: block;
+  font-size: var(--strongtit);
+  line-height: var(--strongtit);
+  text-transform: uppercase;
+}
+.ct_txt {
+  display: block;
+  font-size: var(--subtit);
+  line-height: var(--subtit);
+}
 
 /* 헤더 공통 */
 
@@ -121,6 +168,10 @@ input:focus {
 .depth02 {
   border: 1px solid;
 }
+.sc_btn span {
+  font-size: 30px;
+  color: var(--white);
+}
 
 /* 푸터 공통 */
 #footer {
@@ -129,6 +180,9 @@ input:focus {
 .footer_gnb {
   display: flex;
 }
+.sns_wrap span {
+  color: var(--white);
+}
 
 /* 버튼 */
 .primary_btn {
@@ -136,7 +190,7 @@ input:focus {
   height: 45px;
   padding: 11px 61px;
   font-size: var(--subtit);
-  line-height: 45px;
+  line-height: var(--subtit);
   background: var(--maincol);
   color: var(--white);
   text-align: center;
@@ -153,4 +207,8 @@ input:focus {
   font-weight: bold;
   text-align: center;
   box-sizing: border-box;
+}
+
+select {
+  color: var(--subcol);
 }
