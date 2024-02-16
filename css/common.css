@@ -63,6 +63,7 @@ body {
   color: var(--subcol);
 }
 [class^=promo_txt] {
+  padding: 81px 0;
   width: 578px;
   margin: 0 auto;
 }
