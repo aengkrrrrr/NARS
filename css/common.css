@@ -67,6 +67,12 @@ body {
   width: 578px;
   margin: 0 auto;
 }
+[class^=controls] a {
+  display: inline-block;
+}
+[class^=controls] i {
+  color: var(--subcol);
+}
 
 .ct_tit{
   display: block;
