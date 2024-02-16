@@ -34,17 +34,7 @@
     line-height: var(--subtit);
     color: var(--white);
     text-transform: uppercase;
-    font-weight: bold;
-}
-.main_slider .contents a:hover{
-    width: 255px;
-    height: 45px;
-    padding: 11px 61px;
-    font-size: var(--subtit);
-    line-height: var(--subtit);
-    background: var(--maincol);
-    color: var(--white);
-    text-align: center;
+    font-weight: 500;
 }
 
 .slide1 {
@@ -67,7 +57,7 @@
     display: block;
     width: 15px;
     height: 15px;
-    background: #d7d7d7;
+    background: var(--white);
     border-radius: 50%;
     margin-bottom: 15px;
 }
@@ -89,12 +79,13 @@
 .main_banner .main_tit {
     font-size: var(--strongtit);
     line-height: var(--strongtit);
+    font-weight: 200;
 }
 .main_banner .sub_tit {
     font-size: 32px;
     line-height: 32px;
-    font-weight: bold;
-    font-family: 'Helvetica Neue', serif;
+    font-weight: 500;
+    margin-top: 10px;
 }
 /* ----------------------------------------------------------------------- */
 
@@ -110,16 +101,6 @@
 }
 .main_promo img {
     width: 960px;
-}
-.main_promo a:hover {
-    width: 255px;
-    height: 45px;
-    padding: 11px 61px;
-    font-size: var(--subtit);
-    line-height: var(--subtit);
-    background: var(--maincol);
-    color: var(--white);
-    text-align: center;
 }
 .main_promo .secondary_btn {
     text-transform: capitalize;
@@ -160,6 +141,24 @@
 .main_bestpd{
     background: var(--subcol);
 }
+/* .main_bestpd a:hover:before {
+    transform: translateX(0);
+}
+.main_bestpd a:before {
+    content:'shop now';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 255px;
+    height: 45px;
+    font-size: var(--subtit);
+    background: var(--maincol);
+    color: var(--white);
+    text-align: center;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    overflow: hidden;
+} */
 /* ----------------------------------------------------------------------- */
 
 

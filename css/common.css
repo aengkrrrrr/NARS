@@ -26,8 +26,9 @@
   color: var(--white);
 }
 body {
-  font-family: 'Helvetica Neue','Pretendard', serif;
+  font-family: "Roboto Condensed",'Pretendard', serif;
   font-size: 20px;
+  font-weight: 300;
   line-height: 20px;
 }
 .cm_pd {
@@ -47,6 +48,7 @@ body {
   color: var(--subcol);
   font-size:calc(var(--maintit) - 4px);
   line-height:calc(var(--maintit) - 4px);
+  text-transform: uppercase;
 }
 [class^=sec_tit] a {
   display: inline-block;
@@ -64,7 +66,7 @@ body {
 }
 [class^=promo_txt] {
   padding: 81px 0;
-  width: 578px;
+  width: 580px;
   margin: 0 auto;
 }
 [class^=controls] a {
@@ -83,7 +85,7 @@ body {
 .ct_txt {
   display: block;
   font-size: var(--subtit);
-  line-height: var(--subtit);
+  line-height: 30px;
 }
 
 /* 헤더 공통 */
@@ -98,7 +100,7 @@ body {
 .sub_nav ul {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   padding-right: 100px;
 }
 .sub_nav a,
@@ -138,7 +140,7 @@ span {
 .gnb>li>a  {
   font-size: var(--subtit);
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
 }
 .gnb .depth {
   position: absolute;
@@ -161,7 +163,7 @@ span {
   color: var(--subcol);
 }
 .gnb .depth02 li:first-child {
-  font-weight: bold;
+  font-weight: 500;
 }
 .search_bt {
   background-color: var(--white);
@@ -192,7 +194,7 @@ input:focus {
 }
 
 /* 버튼 */
-.primary_btn {
+/* .primary_btn {
   width: 255px;
   height: 45px;
   padding: 11px 61px;
@@ -201,8 +203,9 @@ input:focus {
   background: var(--maincol);
   color: var(--white);
   text-align: center;
-}
+} */
 .secondary_btn {
+  position: relative;
   width: 255px;
   height: 45px;
   display: inline-block;
@@ -211,9 +214,24 @@ input:focus {
   background: var(--white);
   color: var(--subcol);
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   box-sizing: border-box;
+}
+.secondary_btn:hover:before {
+  width: 100%;
+}
+.secondary_btn:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  background: var(--maincol);
+  color: var(--white);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 select {
