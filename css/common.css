@@ -168,13 +168,12 @@ span {
   color: var(--subcol);
   width: 260px;
   height: 40px;
+  padding-left: 10px;
 }
 input:focus {
   outline: none;
 }
-.depth02 {
-  border: 1px solid;
-}
+
 .sc_btn span {
   font-size: 30px;
   color: var(--white);
@@ -183,12 +182,78 @@ input:focus {
 /* 푸터 공통 */
 #footer {
   background: var(--subcol);
+  padding: 147px 187px 91px;
+  position: relative;
+}
+.footer_gnb_wrap {
+  padding-bottom: 154px;
 }
 .footer_gnb {
   display: flex;
+  gap: 60px;
+}
+.footer_gnb>li>a {
+  font-size: var(--subtit);
+  line-height: var(--subtit);
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+}
+.footer_gnb>li>a::before {
+  content: '';
+  width: 297px;
+  height: 1px;
+  background: var(--white);
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+.footer_gnb>li {
+  width: 297px;
+}
+.depth02 {
+  margin-top: 30px;
+}
+.depth02>li>a {
+  display: inline-block;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.sns_wrap{
+  display: flex;
+  gap: 30px;
+}
+.sns_wrap .sns {
+  display: flex;
+  gap: 20px;
 }
 .sns_wrap span {
   color: var(--white);
+  text-transform: uppercase;
+}
+select {
+  padding-left: 10px;
+  font-weight: 100;
+  width: 150px;
+  height: 41px;
+  color: var(--white);
+  background: var(--subcol);
+}
+#footer>p {
+  display: inline-block;
+  padding-top: 20px;
+  margin-right: 40px;
+}
+.contact {
+  position: absolute;
+  right: 187px;
+  bottom: 88px;
+}
+.contact p {
+  text-transform: uppercase;
+}
+.contact p + p {
+  padding-top: 20px;
 }
 
 /* 버튼 */
@@ -230,8 +295,4 @@ input:focus {
   transition: all 0.2s ease;
   overflow: hidden;
   white-space: nowrap;
-}
-
-select {
-  color: var(--subcol);
 }
