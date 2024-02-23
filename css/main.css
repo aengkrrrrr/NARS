@@ -2,16 +2,21 @@
 .sc_btn {
     color: var(--white);
 }
-.slide-wrapper {
-    width: 100%;
+.main_slider .slide-wrapper {
+    /* width: 100%; */
     overflow: hidden;
     position: relative;
+    height: 760px;
+    overflow: hidden;
 }
-.slide-container {
+.main_slider .slide-container {
     position: relative;
-    display: flex;
     margin:0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    top:0;
+    transition:top 0.5s;
 }
 .main_slider .slide-container>li {
     height: 760px;
@@ -24,6 +29,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    top: 0;
+    
 }
 .main_slider .contents {
     padding-left: 350px;
@@ -109,21 +117,79 @@
 
 
 /* 메인 newpd 슬라이드 */
-
+.main_newpd .slide-wrapper {
+    width: 1370px;
+    height: 650px;
+    margin: 0 0 0 360px;
+    position: relative;
+}
 .main_newpd .slide-container {
-    justify-content: flex-end;
+    /* width: 10000px; */
+    position: relative;
+    left: 0px;
+    display: flex;
     gap: 30px;
+}
+.main_newpd .slide-container.animated{
+    transition:left 0.3s;
+}
+.main_newpd .slide-container>li {
+    width: 366px;
+    height: 644px;
+}
+.main_newpd .slide-container>li>a {
+    display: block;
 }
 .main_newpd .sec_tit {
     display: inline-block;
 }
-.main_newpd .pd_txt p {
+.main_newpd .pd_txt {
+    padding-top: 20px
+}
+.main_newpd .pd_txt span {
+    font-weight: 500;
+    font-family: 'pretendard', sans-serif;
+}
+.main_newpd .pd_txt a {
+    font-weight: 500;
+    line-height: 30px;
+    display: inline-block;
     color: var(--subcol);
+    padding-bottom: 50px;
+}
+.main_newpd .pd_txt .sale {
+    font-size: 28px;
+    line-height: 28px;
+    color: var(--maincol);
+    font-weight: 700;
+    font-family: 'pretendard', sans-serif;
+}
+.main_newpd .pd_txt .sale_pr {
+    text-decoration: line-through;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    font-family: 'pretendard', sans-serif;
+    color: #aaa;
+}
+.main_newpd .pd_txt p {
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 .main_newpd img {
     width: 100%;
 }
+.main_newpd .controls {
+    position: absolute;
+    left: -360px;
+    bottom: 0;
+}
+ .controls .prev {
+    margin-right: 30px;
+ }
 /* ----------------------------------------------------------------------- */
+
 
 
 /* 메인 bestpd */
@@ -140,48 +206,99 @@
 .main_bestpd{
     background: var(--subcol);
 }
-/* .main_bestpd a:hover:before {
-    transform: translateX(0);
-}
-.main_bestpd a:before {
-    content:'shop now';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 255px;
-    height: 45px;
-    font-size: var(--subtit);
-    background: var(--maincol);
-    color: var(--white);
-    text-align: center;
-    transition: all 0.5s;
-    transform: translateX(-100%);
-    overflow: hidden;
-} */
 /* ----------------------------------------------------------------------- */
 
 
 /* 메인 sns슬라이드 */
+.main_sns .slide-wrapper {
+    width: 1370px;
+    height: 650px;
+    margin: 0 0 0 360px;
+    position: relative;
+}
 .main_sns .slide-container {
-    justify-content: flex-end;
+    width: 10000px;
+    position: absolute;
+    left: 0px;
+    display: flex;
     gap: 30px;
 }
+.main_sns .sec_tit {
+    display: inline-block;
+}
+.main_sns .pd_txt p {
+    color: var(--subcol);
+}
+.main_sns li {
+    position: relative;
+    width: 366px;
+    height: 644px;
+    transition: top 0.5s;
+}
+.main_sns li:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 366px;
+    height: 644px;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.main_sns li:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 35px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    background:url(/images/play-solid.svg) no-repeat;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.main_sns li:hover {
+    top: -30px;
+}
+.main_sns li:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+.main_sns li:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+.main_sns img {
+    width: 100%;
+}
+.main_sns .controls {
+    position: absolute;
+    left: -360px;
+    bottom: 0;
+}
+ .controls .prev {
+    margin-right: 30px;
+ }
 /* ----------------------------------------------------------------------- */
 
 /* 메인 popular */
 .main_pop {
     display: flex;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid rgba(0, 0, 0, .6);
 }
 .pop_area {
-    width: 480px;
+    width: 25%;
     background: var(--subcol);
 }
 .main_pop img {
     width: 100%;
 }
 .pop_area a {
-    display: inline-block;
+    display: block;
     text-transform: uppercase;
     font-size: 36px;
     line-height: 36px;

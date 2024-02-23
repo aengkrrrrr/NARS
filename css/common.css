@@ -31,6 +31,17 @@ body {
   font-weight: 300;
   line-height: 20px;
 }
+/* input x버튼 초기화 */
+input::-ms-clear,
+input::-ms-reveal{
+	display:none;width:0;height:0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+	display:none;
+}
 .cm_pd {
   padding: 135px 0 81px 187px;
 }
@@ -88,12 +99,27 @@ body {
 
 /* 헤더 공통 */
 
+#header {
+  position: fixed;
+  left:50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1;
+}
 .sub_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 var(--mainpd);
   height: 43px;
+  background: var(--white);
+}
+.sub_nav_sec {
+  display: flex;
+  align-items: bottom;
+}
+.sub_nav_sec span {
+  padding-left: 10px;
 }
 .sub_nav ul {
   display: flex;
@@ -104,6 +130,7 @@ body {
 .sub_nav a,
 span {
   color: var(--subcol);
+  vertical-align: bottom;
 }
 .sub_nav ul li > a {
   text-transform: uppercase;
@@ -122,7 +149,6 @@ span {
 .header_ct {
   background: var(--subcol);
   padding: 0 var(--mainpd);
-  /* height: 88px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,40 +158,83 @@ span {
   align-items: center;
   gap: 30px;
 }
-.gnb>li {
-  position: relative;
-}
 .gnb>li>a  {
   font-size: var(--subtit);
+  line-height: 90px;
   text-transform: uppercase;
   font-weight: 500;
+  display: inline-block;
+  height: 90px;
 }
+
 .gnb .depth {
   position: absolute;
   left: 0;
-  top:  calc(100% + 34px);
-  /* display: flex; */
-  display: none;
+  top:100%;
+  display: flex;
   gap: 48px;
   width: 1920px;
   height: 411px;
-  /* background: var(--white); */
-  background: pink;
-  padding-top: 40px;
+  background: var(--white);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.gnb_wrap > .gnb > li:hover .depth{
+  opacity: 1;
+  visibility: visible;
 }
 
-.gnb .depth02 {
-  width: 87px;
+.gnb .depth img {
+  padding-right: 22px;
 }
-.gnb .depth02 a {
+.gnb .depth02 {
+  padding-top: 40px;
+  width: 100px;
+}
+.gnb .depth02>li>a {
   color: var(--subcol);
 }
 .gnb .depth02 li:first-child {
+  font-size: var(--subtit);
+  line-height: var(--subtit);
   font-weight: 500;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.gnb .depth02 li:not(:nth-of-type(1)){
+  margin-bottom: 15px;
+}
+.gnb .depth02 li:not(:nth-of-type(1)):hover a{
+  color: var(--maincol);
+}
+.gnb .depth.fn .depth02 {
+  display: flex;
+  padding-top: 10px;
+}
+.gnb .depth.fn img {
+  width: 640px;
+  padding: 0;
+}
+.gnb .depth.fn li a:first-child {
+  font-size: var(--subtit);
+  line-height:var(--subtit);
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 0 10px 10px;
+  display: inline-block;
+}
+.gnb .depth.fn li:hover a {
+  color: var(--maincol);
+}
+.header_ct form {
+  display: flex;
 }
 .search_bt {
-  background-color: var(--white);
-  color: var(--subcol);
+  background:none;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  color: var(--white);
   width: 260px;
   height: 40px;
   padding-left: 10px;
@@ -177,6 +246,7 @@ input:focus {
 .sc_btn span {
   font-size: 30px;
   color: var(--white);
+  vertical-align: bottom;
 }
 
 /* 푸터 공통 */
@@ -192,14 +262,19 @@ input:focus {
   display: flex;
   gap: 60px;
 }
-.footer_gnb>li>a {
+.footer_gnb>li h3 {
   font-size: var(--subtit);
   line-height: var(--subtit);
   font-weight: 400;
   text-transform: uppercase;
   position: relative;
 }
-.footer_gnb>li>a::before {
+.footer_gnb>li>a {
+  font-size: var(--subtit);
+  line-height: var(--subtit);
+  font-weight: 400;
+}
+.footer_gnb>li h3:before {
   content: '';
   width: 297px;
   height: 1px;
@@ -217,7 +292,11 @@ input:focus {
 .depth02>li>a {
   display: inline-block;
   text-transform: capitalize;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  transition: all 0.4s;
+}
+.depth02>li>a:hover {
+  color: var(--maincol);
 }
 .sns_wrap{
   display: flex;
@@ -241,7 +320,7 @@ select {
 }
 #footer>p {
   display: inline-block;
-  padding-top: 20px;
+  padding-top: 40px;
   margin-right: 40px;
 }
 .contact {
@@ -280,19 +359,22 @@ select {
   font-weight: 600;
   text-align: center;
   box-sizing: border-box;
+  z-index: 1;
+}
+.secondary_btn:hover{
+  color: #fff;
 }
 .secondary_btn:hover:before {
   width: 100%;
 }
 .secondary_btn:before {
-  content: attr(data-text);
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
-  width: 0;
+  width: 0%;
+  bottom: 0;
   background: var(--maincol);
-  color: var(--white);
-  transition: all 0.2s ease;
-  overflow: hidden;
-  white-space: nowrap;
+  transition: all 0.5s ease;
+  z-index: -1;
 }

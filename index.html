@@ -19,8 +19,10 @@
 <body>
   <header id="header">
     <div class="sub_nav">
-      <a href="#">find your optimal foundation shade and formulation start now</a>
-      <span class="material-symbols-outlined">trending_flat</span>
+      <div class="sub_nav_sec">
+        <a href="#">find your optimal foundation shade and formulation start now</a>
+        <a href="#"><span class="material-symbols-outlined">trending_flat</span></a>
+      </div>
       <ul>
         <li><a href="#">register</a></li>
         <li><a href="#"><span class="material-symbols-outlined">help</span></a></li>
@@ -35,6 +37,7 @@
           <li>
             <a href="#">product</a>
             <div class="depth">
+              <img src="./images/menu_eye.jpg" alt="">
               <ul class="depth02">
                 <li><a href="#">아이</a></li>
                 <li><a href="">아이래쉬</a></li>
@@ -45,6 +48,7 @@
                 <li><a href="">팔레트</a></li>
               </ul>
               <ul class="depth02">
+                <li><a href="">페이스</a></li>
                 <li><a href="">파운데이션</a></li>
                 <li><a href="">파우더</a></li>
                 <li><a href="">컨실러</a></li>
@@ -64,38 +68,48 @@
           <li>
             <a href="#">care&tool</a>
             <div class="depth">
-              <ul class="depth02">
-                  <li><a href="">브러쉬&툴</a></li>
-                  <li><a href="">페이스</a></li>
-                  <li><a href="">아이</a></li>
-                  <li><a href="">치크</a></li>
-                  <li><a href="">립</a></li>
-                  <li><a href="">브러쉬</a></li>
-                  <li><a href="">가부키</a></li>
-               </ul>
-               <ul class="depth02">
-                <li><a href="">스킨케어</a></li>
-                <li><a href="">세럼</a></li>
-                <li><a href="">모이스처</a></li>
-                <li><a href="">프라이머</a></li>
-                <li><a href="">리무버</a></li>
-               </ul>
+                <img src="./images/menu_tool.jpg" alt="">
+                <ul class="depth02">
+                    <li><a href="">브러쉬&툴</a></li>
+                    <li><a href="">페이스</a></li>
+                    <li><a href="">아이</a></li>
+                    <li><a href="">치크</a></li>
+                    <li><a href="">립</a></li>
+                    <li><a href="">브러쉬</a></li>
+                    <li><a href="">가부키</a></li>
+                </ul>
+                <ul class="depth02">
+                  <li><a href="">스킨케어</a></li>
+                  <li><a href="">세럼</a></li>
+                  <li><a href="">모이스처</a></li>
+                  <li><a href="">프라이머</a></li>
+                  <li><a href="">리무버</a></li>
+                </ul>
             </div>
-           </li>
+          </li>
            <li>
             <a href="#">francois nars</a>
-            <div class="depth">
+            <div class="depth fn">
               <ul class="depth02">
-                  <li><a href="">explore</a></li>
-                  <li><a href="">about</a></li>
-                  <li><a href="">books</a></li>
+                  <li>
+                    <a href="">explore</a>
+                    <a href=""><img src="./images/about01.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a href="">about</a>
+                    <a href=""><img src="./images/about02.png" alt=""></a>
+                  </li>
+                  <li>
+                    <a href="">books</a>
+                    <a href=""><img src="./images/about03.png" alt=""></a>
+                  </li>
                </ul>
             </div>
            </li>
           <li><a href="#">foundation finder</a></li>
         </ul>
       </nav>
-      <form action="" method="get">
+      <form action="#" method="get">
         <input type="search" name="search" class="search_bt">
         <button class="sc_btn">
           <span class="material-symbols-outlined">search</span>
@@ -104,7 +118,7 @@
     </div>
   </header>
   <section class="main_slider">
-    <h1 class="hidden">메인슬라이드</h1>
+    <h2 class="hidden">메인슬라이드</h2>
     <div class="slide-wrapper">
       <ul class="slide-container">
           <li class="slide1">
@@ -118,7 +132,7 @@
                   <a href="" class="secondary_btn"  data-text="shop now">shop now</a>
               </div>
           </li>
-          <li class="slide2 hidden">
+          <li class="slide2">
               <div class="contents">
                 <span>online exclusive</span>
                 <h2 class="ct_tit">stay in power</h2>
@@ -129,7 +143,7 @@
                 <a href="" class="secondary_btn" data-text="shop now">shop now</a>
               </div>
           </li>
-          <li class="slide3 hidden">
+          <li class="slide3">
               <div class="contents">
                 <span>online exclusive</span>
                 <h2 class="ct_tit">stay in power</h2>
@@ -153,7 +167,7 @@
     <p class="sub_tit">-francois nars, founder&create director</p>
   </div>
   <section class="main_promo">
-    <h1 class="hidden">메인 프로모션</h1>
+    <h2 class="hidden">메인 프로모션</h2>
     <div class="contents_area contents">
       <div class="promo_txt contents">
         <h2 class="ct_tit">FIND YOUR<br>FOUNDATION</h2>
@@ -166,7 +180,7 @@
     <img src="images/promo_img.jpg" alt="프로모션 이미지">
   </section>
   <section class="main_newpd cm_pd">
-    <h1 class="hidden">메인 신제품 슬라이드</h1>
+    <h2 class="hidden">메인 신제품 슬라이드</h2>
     <div class="sec_tit">
       <h3>new product</h3>
       <a href="">view more</a>
@@ -175,50 +189,102 @@
     <div class="slide-wrapper">
       <ul class="slide-container">
           <li class="new_slide1">
-            <img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지">
+            <a href=""><img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지"></a>
             <div class="pd_txt">
-             <p>래디언트 크리미 컨실러<br>13 shades</p>
-             <span>10%</span>
-             <span>39,600원</span>
-             <span>44,000원</span>
+             <a href="">래디언트 크리미 컨실러<br>13 shades</a>
+             <p>
+              <span class="sale">10%</span>
+              <span>39,600원</span>
+              <span class="sale_pr">44,000원</span>
+            </p>
             </div>
           </li>
           <li class="new_slide2">
-            <img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지">
+            <a href=""><img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지"></a>
             <div class="pd_txt">
-             <p>래디언트 크리미 컨실러<br>13 shades</p>
-             <span>10%</span>
-             <span>39,600원</span>
-             <span>44,000원</span>
+             <a href="">래디언트 크리미 컨실러<br>13 shades</a>
+             <p>
+              <span class="sale">10%</span>
+              <span>39,600원</span>
+              <span class="sale_pr">44,000원</span>
+            </p>
             </div>
           </li>
           <li class="new_slide3">
-            <img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지">
+            <a href=""><img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지"></a>
             <div class="pd_txt">
-             <p>래디언트 크리미 컨실러<br>13 shades</p>
-             <span>10%</span>
-             <span>39,600원</span>
-             <span>44,000원</span>
+             <a href="">래디언트 크리미 컨실러<br>13 shades</a>
+             <p>
+              <span class="sale">10%</span>
+              <span>39,600원</span>
+              <span class="sale_pr">44,000원</span>
+            </p>
             </div>
           </li>
           <li class="new_slide4">
-            <img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지">
+            <a href=""><img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지"></a>
             <div class="pd_txt">
-             <p>래디언트 크리미 컨실러<br>13 shades</p>
-             <span>10%</span>
-             <span>39,600원</span>
-             <span>44,000원</span>
+             <a href="">래디언트 크리미 컨실러<br>13 shades</a>
+             <p>
+              <span class="sale">10%</span>
+              <span>39,600원</span>
+              <span class="sale_pr">44,000원</span>
+            </p>
+            </div>
+          </li>
+          <li class="new_slide5">
+            <a href=""><img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지"></a>
+            <div class="pd_txt">
+             <a href="">래디언트 크리미 컨실러<br>13 shades</a>
+             <p>
+              <span class="sale">10%</span>
+              <span>39,600원</span>
+              <span class="sale_pr">44,000원</span>
+            </p>
+            </div>
+          </li>
+          <li class="new_slide6">
+            <a href=""><img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지"></a>
+            <div class="pd_txt">
+             <a href="">래디언트 크리미 컨실러<br>13 shades</a>
+             <p>
+              <span class="sale">10%</span>
+              <span>39,600원</span>
+              <span class="sale_pr">44,000원</span>
+            </p>
+            </div>
+          </li>
+          <li class="new_slide7">
+            <a href=""><img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지"></a>
+            <div class="pd_txt">
+             <a href="">래디언트 크리미 컨실러<br>13 shades</a>
+             <p>
+              <span class="sale">10%</span>
+              <span>39,600원</span>
+              <span class="sale_pr">44,000원</span>
+            </p>
+            </div>
+          </li>
+          <li class="new_slide8">
+            <a href=""><img src="/images/pd01.jpg" alt="신제품 슬라이드 이미지"></a>
+            <div class="pd_txt">
+             <a href="">래디언트 크리미 컨실러<br>13 shades</a>
+             <p>
+              <span class="sale">10%</span>
+              <span>39,600원</span>
+              <span class="sale_pr">44,000원</span>
+            </p>
             </div>
           </li>
       </ul>
       <p class="controls">
-        <a href="#" id="prev" class="prev"><i class="fa-solid fa-chevron-left"></i></a>
-        <a href="#" id="next" class="next"><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="#" id="new_prev" class="prev"><i class="fa-solid fa-chevron-left"></i></a>
+        <a href="#" id="new_next" class="next"><i class="fa-solid fa-chevron-right"></i></a>
       </p>
     </div>
   </section>
   <section class="main_bestpd">
-    <h1 class="hidden">메인 베스트 제품</h1>
+    <h2 class="hidden">메인 베스트 제품</h2>
     <div class="ct_area">
       <img src="/images/best_img1.jpg" alt="베스트 섹션 이미지">
       <div class="contents_area contents">
@@ -243,35 +309,35 @@
     </div>
   </section>
   <section class="main_sns cm_pd">
-    <h1 class="hidden">메인 sns</h1>
+    <h2 class="hidden">메인 sns</h2>
+    <div class="sec_tit">
+      <h3>NARS SNS</h3>
+      <a href="">view more</a>
+      <span class="material-symbols-outlined">trending_flat</span>
+    </div>
     <div class="slide-wrapper">
-      <div class="sec_tit">
-        <h3>NARS SNS</h3>
-        <a href="">view more</a>
-        <span class="material-symbols-outlined">trending_flat</span>
-      </div>
       <ul class="slide-container">
           <li class="sns_slide1">
-            <img src="/images/sns_04.jpg" alt="sns 슬라이드 이미지">
+            <a href=""><img src="/images/sns_04.jpg" alt="sns 슬라이드 이미지"></a>
           </li>
           <li class="sns_slide2">
-            <img src="/images/sns_02.jpg" alt="sns 슬라이드 이미지">
+            <a href=""><img src="/images/sns_02.jpg" alt="sns 슬라이드 이미지"></a>
           </li>
           <li class="sns_slide3">
-            <img src="/images/sns_03.jpg" alt="sns 슬라이드 이미지">
+           <a href=""><img src="/images/sns_03.jpg" alt="sns 슬라이드 이미지"></a> 
           </li>
           <li class="sns_slide4">
-            <img src="/images/sns_04.jpg" alt="sns 슬라이드 이미지">
+           <a href=""><img src="/images/sns_04.jpg" alt="sns 슬라이드 이미지"></a> 
           </li>
       </ul>
       <p class="controls">
-        <a href="#" id="prev" class="prev"><i class="fa-solid fa-chevron-left"></i></a>
-        <a href="#" id="next" class="next"><i class="fa-solid fa-chevron-right"></i></a>
+        <a href="#" id="sns_prev" class="prev"><i class="fa-solid fa-chevron-left"></i></a>
+        <a href="#" id="sns_next" class="next"><i class="fa-solid fa-chevron-right"></i></a>
       </p>
     </div>
   </section>
   <section class="main_pop">
-    <h1 class="hidden">메인 유명 제품</h1>
+    <h2 class="hidden">메인 유명 제품</h2>
     <div class="pop_area">
       <img src="/images/eye 1.png" alt="인기 섹션 이미지">
         <a href="">eyes</a>
@@ -293,20 +359,20 @@
     <nav class="footer_gnb_wrap">
       <ul class="footer_gnb">
         <li>
-          <a href="">about nars</a>
+          <h3>about nars</h3>
           <ul class="depth02">
             <li><a href="">about nars</a></li>
             <li><a href="">francois nars</a></li>
           </ul>
         </li>
         <li>
-          <a href="">my page</a>
+          <h3>my page</h3>
           <ul class="depth02">
             <li><a href="">costomer care</a></li>
           </ul>
         </li>
         <li>
-          <a href="">shopping</a>
+          <h3>shopping</h3>
           <ul class="depth02">
             <li><a href="">new product</a></li>
             <li><a href="">popular</a></li>
@@ -314,7 +380,7 @@
           </ul>
         </li>
         <li>
-          <a href="">help&amp;faq</a>
+          <h3>help&amp;faq</h3>
           <ul class="depth02">
             <li><a href="">what's new</a></li>
             <li><a href="">award winners</a></li>
@@ -328,7 +394,7 @@
       <div class="sns">
         <a href=""><i class="fa-brands fa-instagram"></i></a>
         <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-        <a href=""><i class="fa-brands fa-x-twitter"></i></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
         <a href=""><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
@@ -351,5 +417,7 @@
       <p>ⓒnars 2024 cosmetics all right reserved</p>
     </div>
   </footer>
+
+  <script src="js/common.js"></script>
 </body>
 </html>
