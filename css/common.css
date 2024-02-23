@@ -30,6 +30,7 @@ body {
   font-size: 20px;
   font-weight: 300;
   line-height: 20px;
+  padding-top: 133px;
 }
 /* input x버튼 초기화 */
 input::-ms-clear,
@@ -44,6 +45,7 @@ input::-webkit-search-results-decoration{
 }
 .cm_pd {
   padding: 135px 0 81px 187px;
+  overflow: hidden;
 }
 .contents{
   display: flex;
@@ -101,10 +103,14 @@ input::-webkit-search-results-decoration{
 
 #header {
   position: fixed;
-  left:50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
+  height: 133px;
+
+  overflow: hidden;
 }
 .sub_nav {
   display: flex;
@@ -152,6 +158,7 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .gnb {
   display: flex;
@@ -173,8 +180,8 @@ span {
   top:100%;
   display: flex;
   gap: 48px;
-  width: 1920px;
-  height: 411px;
+  width: 100%;
+  /* height: 564px; */
   background: var(--white);
   opacity: 0;
   visibility: hidden;
@@ -190,8 +197,9 @@ span {
 }
 .gnb .depth02 {
   padding-top: 40px;
-  width: 100px;
+  margin-top: 10px;
 }
+
 .gnb .depth02>li>a {
   color: var(--subcol);
 }
@@ -210,12 +218,17 @@ span {
 }
 .gnb .depth.fn .depth02 {
   display: flex;
-  padding-top: 10px;
+  padding-top: 0;
+}
+.gnb .depth.fn .depth02>li {
+  padding: 0;
+  margin-bottom: 0;
 }
 .gnb .depth.fn img {
   width: 640px;
   padding: 0;
 }
+
 .gnb .depth.fn li a:first-child {
   font-size: var(--subtit);
   line-height:var(--subtit);
@@ -287,12 +300,11 @@ input:focus {
   width: 297px;
 }
 .depth02 {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .depth02>li>a {
   display: inline-block;
   text-transform: capitalize;
-  margin-bottom: 10px;
   transition: all 0.4s;
 }
 .depth02>li>a:hover {
