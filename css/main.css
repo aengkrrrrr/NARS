@@ -118,28 +118,48 @@
 
 /* 메인 newpd 슬라이드 */
 .main_newpd .slide-wrapper {
-    width: 1370px;
+    /* width: 1370px;
     height: 650px;
     margin: 0 0 0 360px;
-    position: relative;
+    position: relative; */
+
+    width: 1500px;
+    overflow: hidden;
+    margin: 0 0 0 500px;
+
 }
 .main_newpd .slide-container {
     /* width: 10000px; */
-    position: relative;
+    /* position: relative;
     left: 0px;
     display: flex;
-    gap: 30px;
+    gap: 30px; */
+
+    position: relative;
+	width:1500px;
+	margin: 0 auto;
+    display: flex;
+	gap: 30px;
+
+
 }
 .main_newpd .slide-container.animated{
-    transition:left 0.3s;
+    transition:left 0.5s;
 }
 .main_newpd .slide-container>li {
-    width: 366px;
-    height: 644px;
+
+    /* width: 366px;
+    height: 644px; */
+
+	width: 360px;
+    background: #fff;
 }
+
+
 .main_newpd .slide-container>li>a {
     display: block;
 }
+
 .main_newpd .sec_tit {
     display: inline-block;
 }
@@ -180,10 +200,11 @@
 .main_newpd img {
     width: 100%;
 }
+
 .main_newpd .controls {
-    position: absolute;
+    /* position: absolute;
     left: -360px;
-    bottom: 0;
+    bottom: 0; */
 }
  .controls .prev {
     margin-right: 30px;
