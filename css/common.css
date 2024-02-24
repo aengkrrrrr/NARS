@@ -1,7 +1,8 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
 
 :root {
-  --maincol : #D10744;
+  --maincol : #fd0a54;
+  /* --maincol : #D10744; */
   --subcol :#000;
   --white :#fff;
   --subtit : 24px;
@@ -20,7 +21,6 @@
   clip:rect(1px, 1px, 1px, 1px);
   clip-path:inset(50%);
 }
-
 *{
   text-decoration: none;
   color: var(--white);
@@ -51,7 +51,7 @@ input::-webkit-search-results-decoration{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 [class^=sec_tit] {
@@ -72,19 +72,27 @@ input::-webkit-search-results-decoration{
 [class^=sec_tit] span {
   display: inline-block;
   color: var(--maincol);
+  animation-name: push;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 }
-[class^=controls] a {
+/* [class^=controls] a {
   display: inline-block;
   color: var(--subcol);
-}
+} */
 [class^=promo_txt] {
   padding: 81px 120px;
 }
-[class^=controls] a {
-  display: inline-block;
-}
 [class^=controls] i {
   color: var(--subcol);
+  font-size: 30px;
+}
+
+@keyframes push {
+  0% {transform: translateX(0); animation-timing-function: ease-out;}
+  50% {transform: translateX(10px);animation-timing-function: ease-in;}
+  100% {transform: translateX(0); animation-timing-function: ease-out;}
 }
 
 .ct_tit{
@@ -172,6 +180,10 @@ span {
   font-weight: 500;
   display: inline-block;
   height: 90px;
+  transition: all 0.6s;
+}
+.gnb>li>a:hover {
+  color: var(--maincol);
 }
 
 .gnb .depth {
@@ -236,6 +248,7 @@ span {
   text-transform: uppercase;
   padding: 0 0 10px 10px;
   display: inline-block;
+  width: 100%;
 }
 .gnb .depth.fn li:hover a {
   color: var(--maincol);
@@ -299,15 +312,16 @@ input:focus {
 .footer_gnb>li {
   width: 297px;
 }
-.depth02 {
-  margin-top: 10px;
+.footer_gnb .depth02 {
+  margin-top: 30px;
 }
-.depth02>li>a {
+.footer_gnb .depth02>li>a {
   display: inline-block;
   text-transform: capitalize;
   transition: all 0.4s;
+  margin-bottom: 5px;
 }
-.depth02>li>a:hover {
+.footer_gnb .depth02>li>a:hover {
   color: var(--maincol);
 }
 .sns_wrap{
@@ -390,3 +404,5 @@ select {
   transition: all 0.5s ease;
   z-index: -1;
 }
+
+

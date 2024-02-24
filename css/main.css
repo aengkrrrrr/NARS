@@ -1,3 +1,30 @@
+/* 팝업 쿠키 */
+.popup {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    position: fixed;
+    left: 100px;
+    top: 200px;
+    background: var(--white);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .2);
+    z-index: 10;
+}
+.popup h2,
+.popup label,
+.popup button {
+    color: var(--subcol);
+}
+.popup h2 {
+    font-size: var(--subtit);
+}
+.popup button {
+    border: 2px solid var(--maincol);
+}
+.popup.hide {
+    display: none;
+}
+
 /* 메인슬라이드 */
 .sc_btn {
     color: var(--white);
@@ -167,6 +194,7 @@
     color: var(--maincol);
     font-weight: 700;
     font-family: 'pretendard', sans-serif;
+    margin-right: 50px;
 }
 .cm_pd .pd_txt .sale_pr {
     text-decoration: line-through;
@@ -175,11 +203,7 @@
     font-weight: 500;
     font-family: 'pretendard', sans-serif;
     color: #aaa;
-}
-.cm_pd .pd_txt p {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    margin-left: 28px;
 }
 .cm_pd img {
     width: 100%;
@@ -190,9 +214,15 @@
     left: 187px;
     bottom: 81px;
 }
+.cm_pd .controls a {
+    display: inline-block;
+    color: var(--subcol);
+}
  .controls .prev {
     margin-right: 30px;
  }
+
+
 /* ----------------------------------------------------------------------- */
 
 
@@ -214,8 +244,49 @@
 /* ----------------------------------------------------------------------- */
 
 
-/* 메인 sns슬라이드 animation */
-
+/* 메인 sns슬라이드 hover, animation */
+.main_sns .slide-container>li>a {
+    position: relative;
+    top: 30px;
+    transition: all 0.5s;
+}
+.main_sns .slide-container>li>a:hover {
+    top: -1px;
+}
+.main_sns .slide-container>li>a:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+.main_sns .slide-container>li>a:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+.main_sns .slide-container>li>a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 360px;
+    height: 644px;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.main_sns .slide-container>li>a:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 50px;
+    background: url(/images/play-solid.svg) no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    z-index: 1;
+}
 
 
 
@@ -241,4 +312,8 @@
     text-align: center;
     font-weight: 500;
     padding: 37px 140px;
+    transition: color 0.5s;
+}
+.pop_area a:hover {
+    color: var(--maincol);
 }

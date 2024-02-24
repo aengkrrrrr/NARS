@@ -20,11 +20,16 @@ for(let mm of mainMenu){
 		let totalHeight = smHeight + headerHeight;
 		header.style.height = `${totalHeight}px`;
 	});
+  mm.addEventListener('mouseleave',()=>{
+    header.style.height = `${headerHeight}px`;
+  });
+
 }
 
-document.querySelector('.gnb .depth').addEventListener('mouseleave',()=>{
-  header.style.height = `${headerHeight}px`;
-})
+
+// document.querySelector('.gnb .depth').addEventListener('mouseleave',()=>{
+//   header.style.height = `${headerHeight}px`;
+// })
 
 ///slideContainer의 너비를 지정
 slides = slideContainer.querySelectorAll('li');
@@ -54,6 +59,7 @@ slideBtn.forEach((item,idx)=>{
 });
 
 
+
 // sub slide 스크립트
 multipleSlide('.main_newpd .slide-wrapper', 360);
 multipleSlide('.main_sns .slide-wrapper', 360);
@@ -67,10 +73,9 @@ function multipleSlide(target, swidth){
   const gap = 30;
   const subslideCount = subslides.length;
   let subcurrentIdx = 0;
-  console.log(subslideCount);
   
   const submoveAmt = swidth + gap;
-  const subslideHeight = subslideWrapper.offsetWidth;
+  // const subslideWidth = subslideWrapper.offsetWidth;
   
   
   //슬라이드 너비
@@ -104,8 +109,10 @@ function multipleSlide(target, swidth){
     
       subcurrentIdx = 0;
     }
-    console.log(subcurrentIdx);
-    }
+    
+    
+    
+  }
   
   
   // 이전 버튼으로 이동하기
@@ -119,6 +126,22 @@ function multipleSlide(target, swidth){
     e.preventDefault();
     subMoveSlide(subcurrentIdx+1);
   });
+  
+  // 슬라이드가 처음이면 이전버튼 색 어둡게, 처음이 아니면 원래대로
+   if(subcurrentIdx == 0) {
+    subslideWrapper.querySelector('i').style.display='none';
+  } else {
+    subslideWrapper.querySelector('i').style.display='';
+  }
+  /* 슬라이드가 마지막이면 next에 버튼 색 어둡게 */
+  if (subcurrentIdx === subslideCount -1) {
+    subslideWrapper.querySelector('i').style.display='none';
+   } else {
+    subslideWrapper.querySelector('i').style.display='';
+    }
+    
+    console.log(subcurrentIdx); //0~
+    console.log(subslideCount); //8 
   
 }
 
