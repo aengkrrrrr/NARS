@@ -29,17 +29,35 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div class="popup">
-    <h2>NARS cosmetics 포트폴리오 리뉴얼 페이지입니다.</h2>
-    <label for="check">하루 안 보기</label>
-    <input type="checkbox" name="" id="check">
-    <button>닫기</button>
+    <div class="pophd">
+      <img src="/images/popup_logo.png" alt="팝업창 로고">
+      <p>NARS cosmetics renual page</p>
+    </div>
+    <h2>본 사이트는 구직용 포트폴리오 웹사이트입니다.<br>실제로 운영되는 사이트가 아닙니다.</h2>
+    <hr>
+    <div class="popct">
+      <p>프로젝트 명: NARS cosmetics 리뉴얼 웹사이트</p>
+      <p>제작기간: 2024. 01. 09 ~ 2024. 02. 26</p>
+      <p>개발환경: html5, css3, javascript</p>
+      <div class="link">
+        <p>기획서: <a href="">피그마</a></p>
+        <p>코드: <a href="" class="git">깃허브</a></p>
+      </div>
+    </div>
+    <hr>
+    <p>기획,디자인,구현: 추송림</p>
+    <div class="cookie">
+      <label for="check">하루 동안 안 보기</label>
+      <input type="checkbox" name="" id="check">
+      <button>닫기</button>
+    </div>
   </div>
   <header id="header">
     <div class="sub_nav">
@@ -49,8 +67,9 @@
       </div>
       <ul>
         <li><a href="#">register</a></li>
-        <li><a href="#"><span class="material-symbols-outlined">help</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">account_circle</span></a></li>
         <li><a href="#"><span class="material-symbols-outlined">shopping_bag</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">help</span></a></li>
       </ul>
     </div>
     <div class="header_ct">
@@ -144,7 +163,7 @@
   <section class="main_slider">
     <h2 class="hidden">메인슬라이드</h2>
     <div class="slide-wrapper">
-      <ul class="slide-container">
+      <ul class="slide-container animated">
           <li class="slide1">
               <div class="contents">
                   <span>online exclusive</span>
@@ -159,22 +178,22 @@
           <li class="slide2">
               <div class="contents">
                 <span>online exclusive</span>
-                <h2 class="ct_tit">stay in power</h2>
-                <p class="ct_txt">나스 2024 뉴 이어 컬렉션<br>
-                  나스 베스트 셀러 제품들을 아이코닉한<br>
-                  레드 패키지에 담아 새롭게 선보입니다.<br>
-                  나스만의 뉴 이어 메이크업 룩을 만나보세요!</p>
+                <h2 class="ct_tit">AFTERGLOW DELIGHT</h2>
+                <p class="ct_txt">NEW 스윗 센세이션 컬렉션<br>
+                  봄을 기다리는 모든 설렘을 담아, 한층 더 달콤해진 <br>
+                  새로운 에프터글로우 컬렉션을 선보입니다. <br>
+                  설레는 봄을 만끽해보세요.</p>
                 <a href="" class="secondary_btn" data-text="shop now">shop now</a>
               </div>
           </li>
           <li class="slide3">
               <div class="contents">
                 <span>online exclusive</span>
-                <h2 class="ct_tit">stay in power</h2>
-                <p class="ct_txt">나스 2024 뉴 이어 컬렉션<br>
-                  나스 베스트 셀러 제품들을 아이코닉한<br>
-                  레드 패키지에 담아 새롭게 선보입니다.<br>
-                  나스만의 뉴 이어 메이크업 룩을 만나보세요!</p>
+                  <h2 class="ct_tit">stay in power</h2>
+                  <p class="ct_txt">나스 2024 뉴 이어 컬렉션<br>
+                    나스 베스트 셀러 제품들을 아이코닉한<br>
+                    레드 패키지에 담아 새롭게 선보입니다.<br>
+                    나스만의 뉴 이어 메이크업 룩을 만나보세요!</p>
                 <a href="" class="secondary_btn" data-text="shop now">shop now</a>
               </div>
           </li>
@@ -324,7 +343,7 @@
       <img src="/images/best_img2.jpg" alt="베스트 섹션 이미지">
       <div class="contents_area contents">
         <div class="promo_txt contents">
-          <h2 class="ct_tit">powermatte lipstick</h2>
+          <h2 class="ct_tit">glowing foundation</h2>
           <p class="ct_txt">high intensity. weightless. pure comfort. show your power with<br>
             a comprehensive range of confident matte shade.</p>
           <a href="" class="secondary_btn" data-text="shop now">shop now</a>
@@ -342,28 +361,28 @@
     <div class="slide-wrapper">
       <ul class="slide-container animated">
           <li class="sns_slide1">
-            <a href=""><img src="/images/sns_04.jpg" alt="sns 슬라이드 이미지"></a>
+            <a href=""><iframe src="https://assets.pinterest.com/ext/embed.html?id=1128925831578277867" height="713" width="345" frameborder="0" scrolling="no" ></iframe></a>
           </li>
           <li class="sns_slide2">
-            <a href=""><img src="/images/sns_02.jpg" alt="sns 슬라이드 이미지"></a>
+            <a href=""><iframe src="https://assets.pinterest.com/ext/embed.html?id=596586281910211071" height="713" width="345" frameborder="0" scrolling="no" ></iframe></a>
           </li>
           <li class="sns_slide3">
-           <a href=""><img src="/images/sns_03.jpg" alt="sns 슬라이드 이미지"></a> 
+           <a href=""><iframe src="https://assets.pinterest.com/ext/embed.html?id=1142577367947548823" height="713" width="345" frameborder="0" scrolling="no" ></iframe></a> 
           </li>
           <li class="sns_slide4">
-           <a href=""><img src="/images/sns_04.jpg" alt="sns 슬라이드 이미지"></a> 
+           <a href=""><iframe src="https://assets.pinterest.com/ext/embed.html?id=614882155403664543" height="713" width="345" frameborder="0" scrolling="no" ></iframe></a> 
           </li>
           <li class="sns_slide5">
-            <a href=""><img src="/images/sns_04.jpg" alt="sns 슬라이드 이미지"></a>
+            <a href=""><iframe src="https://assets.pinterest.com/ext/embed.html?id=1128925831578277867" height="713" width="345" frameborder="0" scrolling="no" ></iframe></a>
           </li>
           <li class="sns_slide6">
-            <a href=""><img src="/images/sns_02.jpg" alt="sns 슬라이드 이미지"></a>
+            <a href=""><iframe src="https://assets.pinterest.com/ext/embed.html?id=596586281910211071" height="713" width="345" frameborder="0" scrolling="no" ></iframe></a>
           </li>
           <li class="sns_slide7">
-           <a href=""><img src="/images/sns_03.jpg" alt="sns 슬라이드 이미지"></a> 
+           <a href=""><iframe src="https://assets.pinterest.com/ext/embed.html?id=1142577367947548823" height="713" width="345" frameborder="0" scrolling="no" ></iframe></a> 
           </li>
           <li class="sns_slide8">
-           <a href=""><img src="/images/sns_04.jpg" alt="sns 슬라이드 이미지"></a> 
+           <a href=""><iframe src="https://assets.pinterest.com/ext/embed.html?id=614882155403664543" height="713" width="345" frameborder="0" scrolling="no" ></iframe></a> 
           </li>
       </ul>
       <p class="controls">
@@ -375,19 +394,19 @@
   <section class="main_pop">
     <h2 class="hidden">메인 유명 제품</h2>
     <div class="pop_area">
-      <img src="/images/eye 1.png" alt="인기 섹션 이미지">
+      <img src="/images/eye01.png" alt="인기 섹션 이미지">
         <a href="">eyes</a>
     </div>
     <div class="pop_area">
-      <img src="/images/lip 2.png" alt="인기 섹션 이미지">
+      <img src="/images/lip02.png" alt="인기 섹션 이미지">
         <a href="">lips</a>
     </div>
     <div class="pop_area">
-      <img src="/images/cheek3.png" alt="인기 섹션 이미지">
+      <img src="/images/cheek03.png" alt="인기 섹션 이미지">
         <a href="">cheek</a>
     </div>
     <div class="pop_area">
-      <img src="/images/complexion2.png" alt="인기 섹션 이미지">
+      <img src="/images/complexion04.png" alt="인기 섹션 이미지">
         <a href="">complexion</a>
     </div>
   </section>

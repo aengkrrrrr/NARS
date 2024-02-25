@@ -1,5 +1,4 @@
 
-
 const slideWrapper = document.querySelector('.slide-wrapper');
 const slideContainer =slideWrapper.querySelector('.slide-container');
 let slides = slideContainer.querySelectorAll('li');
@@ -36,6 +35,7 @@ slides = slideContainer.querySelectorAll('li');
 let newslideCount = slides.length;
 
 
+
 // 이동함수
 function moveSlide(idx) {
 // idx = 0, slideContainer left 0,
@@ -56,6 +56,17 @@ slideBtn.forEach((item,idx)=>{
     }
     item.classList.add('active');
   });
+  //한 방향 무한이동 슬라이드
+  // function moveSlide(num){
+  //   if(currentIdx == num) return;
+  //   let currentSlide = slides[currentIdx];
+  //   let nextSlide = slides[num];
+  
+  //   currentSlide.animate([{ top: "0%" },{ top: "-100%" }],{ duration: 500, fill: "forwards" });
+  //   nextSlide.animate([{ top: "100%" },{ top: "0%" }],{ duration: 500, fill: "forwards" });
+  
+  //   currentIdx = num;
+  // }
 });
 
 
@@ -111,6 +122,20 @@ function multipleSlide(target, swidth){
     }
     
     
+
+  // 슬라이드가 처음이면 이전버튼 색 어둡게, 처음이 아니면 원래대로
+  if(subcurrentIdx == 0) {
+    subslideWrapper.querySelector('.prev').style.display='none';
+  } else {
+    subslideWrapper.querySelector('.prev').style.display='';
+  }
+  /* 슬라이드가 마지막이면 next에 버튼 색 어둡게 */
+  if (subcurrentIdx === subslideCount -3) {
+    subslideWrapper.querySelector('.next').style.display='none';
+   } else {
+    subslideWrapper.querySelector('.next').style.display='';
+    }
+
     
   }
   
@@ -127,22 +152,9 @@ function multipleSlide(target, swidth){
     subMoveSlide(subcurrentIdx+1);
   });
   
-  // 슬라이드가 처음이면 이전버튼 색 어둡게, 처음이 아니면 원래대로
-   if(subcurrentIdx == 0) {
-    subslideWrapper.querySelector('i').style.display='none';
-  } else {
-    subslideWrapper.querySelector('i').style.display='';
-  }
-  /* 슬라이드가 마지막이면 next에 버튼 색 어둡게 */
-  if (subcurrentIdx === subslideCount -1) {
-    subslideWrapper.querySelector('i').style.display='none';
-   } else {
-    subslideWrapper.querySelector('i').style.display='';
-    }
-    
-    console.log(subcurrentIdx); //0~
-    console.log(subslideCount); //8 
+
   
+    
 }
 
 

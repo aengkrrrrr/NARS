@@ -1,8 +1,8 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
 
 :root {
-  --maincol : #fd0a54;
-  /* --maincol : #D10744; */
+ /* --maincol : #fd0a54;*/
+   --maincol : #D10744; 
   --subcol :#000;
   --white :#fff;
   --subtit : 24px;
@@ -26,7 +26,7 @@
   color: var(--white);
 }
 body {
-  font-family: "Roboto Condensed",'Pretendard', serif;
+  font-family: "Roboto Condensed","Noto Sans KR",serif;
   font-size: 20px;
   font-weight: 300;
   line-height: 20px;

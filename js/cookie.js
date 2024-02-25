@@ -4,7 +4,7 @@ const closeBtn =popup.querySelector('button');
 
 
 closeBtn.addEventListener('click',()=>{
-  // console.log(input.checked);
+  // console.log(in5660put.checked);
   if(input.checked){
     //쿠키생성
     setCookie('Portfolio','Nars', 1);
