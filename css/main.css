@@ -328,6 +328,11 @@
 .main_sns .slide-container>li>a:hover {
     top: -1px;
 }
+.main_sns .slide-container>li iframe {
+    width: 345px;
+    height: 713px;
+}
+
 /* .main_sns .slide-container>li>a:hover:after {
     opacity: 1;
     visibility: visible;
