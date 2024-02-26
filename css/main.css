@@ -1,6 +1,6 @@
 /* 팝업 쿠키 */
 .popup {
-    width: 500px;
+    width: 525px;
     height: 610px;
     padding: 30px 40px;
     position: fixed;
@@ -10,6 +10,7 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
     z-index: 100;
     border: 4px solid var(--subcol);
+    font-family: 'Noto Sans KR',sans-serif;
 }
 .pophd{
     display: flex;
@@ -61,7 +62,7 @@
     height: 30px;
 }
 .popup .cookie {
-    padding-top: 80px;
+    padding-top: 70px;
 }
 .popup button {
     background: #000;
@@ -69,6 +70,8 @@
     border-radius: 3px;
     margin-left: 270px;
     margin-top: 15px;
+    width: 60px;
+    height: 30px;
 }
 .popup.hide {
     display: none;
@@ -76,7 +79,7 @@
 .cookie {
  display: flex;
  align-items: center;
- gap: 15px;
+ gap: 7px;
 }
 .cookie label {
     font-size: 18px;
@@ -246,7 +249,7 @@
 }
 .cm_pd .pd_txt span {
     font-weight: 500;
-    font-family: 'pretendard', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .cm_pd .pd_txt a {
     font-weight: 500;
@@ -309,6 +312,9 @@
 }
 .main_bestpd{
     background: var(--subcol);
+}
+.main_bestpd .ct_txt {
+    font-family: "Roboto Condensed",serif;
 }
 /* ----------------------------------------------------------------------- */
 

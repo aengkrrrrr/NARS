@@ -24,6 +24,7 @@
 *{
   text-decoration: none;
   color: var(--white);
+  /* font-family: 'Noto Sans KR',sans-serif; */
 }
 body {
   font-family: "Roboto Condensed","Noto Sans KR",serif;
@@ -77,6 +78,9 @@ input::-webkit-search-results-decoration{
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
 }
+[class^=pd_txt] a {
+  font-family: 'Noto Sans KR',sans-serif;
+}
 /* [class^=controls] a {
   display: inline-block;
   color: var(--subcol);
@@ -105,6 +109,7 @@ input::-webkit-search-results-decoration{
   display: block;
   font-size: var(--subtit);
   line-height: 30px;
+  font-family: 'Noto Sans KR',sans-serif;
 }
 
 /* 헤더 공통 */
@@ -198,6 +203,7 @@ span {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  font-family: 'Noto Sans KR',sans-serif;
 }
 .gnb_wrap > .gnb > li:hover .depth{
   opacity: 1;
@@ -231,6 +237,7 @@ span {
 .gnb .depth.fn .depth02 {
   display: flex;
   padding-top: 0;
+  font-family: "Roboto Condensed",serif;
 }
 .gnb .depth.fn .depth02>li {
   padding: 0;
@@ -343,6 +350,7 @@ select {
   height: 41px;
   color: var(--white);
   background: var(--subcol);
+  font-family: 'Noto Sans KR', sans-serif;
 }
 #footer>p {
   display: inline-block;
