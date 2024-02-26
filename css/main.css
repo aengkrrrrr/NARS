@@ -320,18 +320,17 @@
 
 
 /* 메인 sns슬라이드 hover, animation */
-.main_sns .slide-container>li>a {
+.main_sns .slide-container>li iframe {
     position: relative;
     top: 10px;
     transition: all 0.5s;
-}
-.main_sns .slide-container>li>a:hover {
-    top: -1px;
-}
-.main_sns .slide-container>li iframe {
     width: 345px;
     height: 713px;
 }
+.main_sns .slide-container>li iframe:hover {
+    top: -1px;
+}
+
 
 /* .main_sns .slide-container>li>a:hover:after {
     opacity: 1;
