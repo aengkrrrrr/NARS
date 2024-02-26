@@ -34,6 +34,9 @@ body {
   padding-top: 133px;
 }
 /* input x버튼 초기화 */
+input {
+  font-family: "Roboto Condensed","Noto Sans KR",sans-serif;
+}
 input::-ms-clear,
 input::-ms-reveal{
 	display:none;width:0;height:0;
