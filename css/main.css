@@ -56,8 +56,8 @@
     content: '';
     position: absolute;
     right: -30px;
-    top: -5px;
-    background: url(/images/git_img.jpeg) no-repeat;
+    top: -2px;
+    background: url(../images/git_img.jpeg) no-repeat;
     width: 30px;
     height: 30px;
 }
